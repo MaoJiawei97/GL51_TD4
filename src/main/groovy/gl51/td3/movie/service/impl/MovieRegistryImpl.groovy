@@ -8,20 +8,17 @@ import gl51.td3.movie.service.MovieRegistry
 
 
 @Singleton
-class MovieRegistryImpl implements MovieRegistry{
-
-private List<Movie> internalRegistry = []
-
+class MovieRegistryImpl implements MovieRegistry {
+    private List<Movie> internalRegistry = []
     @Inject
-
     private MovieClient movieClient
+    @Override
+    void addMovieToFavorites(String ID) {
+        internalRegistry << movieClient.getMovieDetail(ID)
+    }
 
     @Override
-    void addMovieToFavorites(String imdbID){
-        internalRegistry << movieClient.getMovieDetail(imdbID)
-    }
-    @Override
-    List<Movie> listFavorites(){
+    List<Movie> listFavorites() {
         internalRegistry
     }
 }
