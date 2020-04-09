@@ -36,7 +36,7 @@ jobs:
 
         with:
 
-          java-version: 12
+          java-version: 11
 
       # do not forget `git update-index --chmod=+x gradlew` to fix permission before !
 
