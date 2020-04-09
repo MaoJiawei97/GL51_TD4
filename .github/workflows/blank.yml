@@ -1,4 +1,5 @@
 
+
 # This is a basic workflow to help you get started with Actions
 
 
@@ -11,15 +12,7 @@ name: CI
 
 # events but only for the master branch
 
-on:
-
-  push:
-
-    branches: [ master ]
-
-  pull_request:
-
-    branches: [ master ]
+on: [push, pull_request]
 
 
 
@@ -43,7 +36,7 @@ jobs:
 
         with:
 
-          java-version: 11
+          java-version: 12
 
       # do not forget `git update-index --chmod=+x gradlew` to fix permission before !
 
