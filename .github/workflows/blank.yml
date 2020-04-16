@@ -51,4 +51,4 @@ jobs:
 
         with:
 
-          arguments: test
+          arguments: check
